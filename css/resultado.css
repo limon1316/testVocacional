@@ -1,213 +1,129 @@
 body{
     margin:0;
     background: radial-gradient(circle,#0C2240,#88A0BF);
-    font-family:'Lucida Sans','Lucida Sans Regular','Lucida Grande','Lucida Sans Unicode',Geneva,Verdana,sans-serif;
+    font-family: Arial, sans-serif;
 }
 
+/* HEADER */
 header{
     background-color:#1f3b6d;
     color:white;
     display:flex;
+    flex-wrap:wrap;
     align-items:center;
     justify-content:center;
-    padding:10px 20px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    text-align:center;
+    padding:10px;
     position:relative;
 }
 
 .logo-izq{
-    width:70px;
+    width:60px;
     position:absolute;
-    left:20px;
+    left:10px;
 }
 
 .logo-der{
-    width:70px;
+    width:60px;
     position:absolute;
-    right:20px;
+    right:10px;
 }
 
 .texto-header{
-    text-align:center;
+    width:100%;
 }
 
 .texto-header h2{
     margin:0;
-    font-size:16px;
+    font-size:14px;
 }
 
 .texto-header h1{
     margin:3px 0 0 0;
-    font-size:22px;
+    font-size:18px;
 }
 
+/* MAIN */
 .main{
-    height: calc(100vh - 80px);
+    padding:20px;
     display:flex;
     justify-content:center;
-    align-items:flex-start;
-    padding-top:20px; 
 }
 
+/* CONTENEDOR */
 .contenedorResultado{
-    width:90%;
+    width:100%;
     max-width:500px;
-    margin:20px auto;
     background:white;
-    padding:19px; 
+    padding:20px;
     border-radius:12px;
     box-shadow:0px 0px 20px rgba(0,0,0,0.3);
     text-align:center;
 }
 
+/* TITULO */
 .titulo{
-    display:flex;
-    align-items:center; 
-    justify-content:center;
-    gap:15px;
-    margin-bottom:25px;
+    margin-bottom:20px;
 }
 
+/* TARJETAS */
 .tarjetaCarrera{
     background:#f5f7fb;
-    padding:3px;
+    padding:10px;
     border-radius:12px;
     box-shadow:0px 0px 10px rgba(0,0,0,0.15);
-    margin-top:10px; 
+    margin-bottom:15px;
 }
 
+/* TEXTO */
 h2{
-    margin-top:5px;
-    margin-bottom:5px;
+    margin:5px 0;
 }
 
 p{
-    font-size:14px; /* un poco más compacto */
+    font-size:14px;
     line-height:1.4;
 }
 
+/* IMAGEN */
 .imagenCarrera{
-    width:220px; /* antes 320px */
+    width:100%;
+    max-width:220px;
+    height:auto;
 }
+
+/* BOTON */
 button{
     background:#88A0BF;
     border:none;
     padding:12px;
-    width:220px;
+    width:100%;
     color:black;
-    font-size:17px;
+    font-size:16px;
     border-radius:25px;
     cursor:pointer;
-    margin-top:30px;
-    transition:all 0.3s ease;
-    position:relative;
-    overflow:hidden;
+    margin-top:20px;
 }
 
+/* EFECTOS */
 button:hover{
     background:rgba(26,59,104,0.8);
     color:white;
-    transform:scale(1.05);
-    box-shadow:0px 5px 15px rgba(0,0,0,0.3);
 }
 
-button:active{
-    transform:scale(0.95);
-}
+/* RESPONSIVE */
+@media (max-width:600px){
 
-button::after{
-    content:"";
-    position:absolute;
-    top:0;
-    left:-100%;
-    width:100%;
-    height:100%;
-    background:rgba(255,255,255,0.3);
-    transform:skewX(-30deg);
-    transition:0.5s;
-}
-
-button:hover::after{
-    left:120%;
-}
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-.main {
-    width: 100%;
-    padding: 10px;
-}
-
-header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 10px;
-}
-
-.logo-izq, .logo-der {
-    width: 60px;
-}
-
-.texto-header {
-    width: 100%;
-}
-
-.texto-header h1 {
-    font-size: 18px;
-}
-
-.texto-header h2 {
-    font-size: 14px;
-}
-
-.card, .contenedorResultado {
-    width: 100%;
-    max-width: 500px;
-    margin: auto;
-    padding: 15px;
-    box-sizing: border-box;
-}
-
-button {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.tarjetaCarrera {
-    margin-bottom: 20px;
-}
-
-@media (max-width: 600px) {
-
-    .logo-izq, .logo-der {
-        width: 50px;
+    .logo-izq, .logo-der{
+        width:45px;
     }
 
-    .texto-header h1 {
-        font-size: 16px;
+    .texto-header h1{
+        font-size:16px;
     }
 
-    .texto-header h2 {
-        font-size: 12px;
+    .texto-header h2{
+        font-size:12px;
     }
 
 }
