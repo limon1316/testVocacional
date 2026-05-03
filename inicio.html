@@ -6,9 +6,51 @@
 <title>Inicio</title>
 <link rel="stylesheet" href="css/estilo.css">
 </head>
-
 <body>
-    <script>
+
+<header>
+    <img src="TecNM_logo.png" class="logo-izq">
+
+    <div class="texto-header">
+        <h2>SII SISTEMA INTEGRAL DE INFORMACIÓN</h2>
+        <h1>TecNM CAMPUS ATITALAQUIA</h1>
+    </div>
+
+    <img src="imgEscudo.png" class="logo-der">
+</header>
+
+<div class="hero">
+
+    <!-- TEXTO -->
+    <div class="hero-text" id="pantalla">
+        <h1>
+        ¿No sabes qué <br>
+        carrera <span>va contigo</span>?<br>
+        ¡Descúbrelo con este <span>test vocacional del TecNM</span>!
+        </h1>
+
+        <button onclick="irAlTest()">Hacer el test</button>
+    </div>
+
+    <!-- IMAGEN -->
+    <div class="hero-img">
+        <img src="itat.jpg">
+    </div>
+
+</div>
+
+<script>
+
+function irAlTest(){
+    let pantalla = document.getElementById("pantalla");
+    pantalla.classList.add("fadeOut");
+
+    setTimeout(()=>{
         window.location.href="index.html";
-    </script>
+    },500);
+}
+
+</script>
+
 </body>
+</html>
